@@ -6,5 +6,8 @@ class BirthdayForm(forms.Form):
     last_name = forms.CharField(
         label='Фамилия', required=False, help_text='Необязательное поле'
     )
-    birthday = forms.DateField(label='Дата рождения')
+    birthday = forms.DateField(
+        label='Дата рождения'
+        widget=forms.DateInput(attrs={'type': 'date'})
+    )
   
